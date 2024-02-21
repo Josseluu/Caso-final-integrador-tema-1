@@ -75,7 +75,7 @@ class MiembroTripulacion {
 
 class Tarea {
     private String nombre;
-    private int duracion; // Duración en minutos
+    private int duracion;
 
     public Tarea(String nombre, int duracion) {
         this.nombre = nombre;
@@ -93,16 +93,16 @@ class Tarea {
 
 public class Planificador_de_tareas {
     public static void main(String[] args) {
-        // Crear miembros de la tripulación
+
         MiembroTripulacion miembro1 = new MiembroTripulacion("Miembro 1");
         MiembroTripulacion miembro2 = new MiembroTripulacion("Miembro 2");
 
-        // Agregar miembros al planificador
+
         PlanificadorTareas planificador = new PlanificadorTareas();
         planificador.agregarMiembro(miembro1);
         planificador.agregarMiembro(miembro2);
 
-        // Crear tareas
+
         List<Tarea> tareas = new ArrayList<>();
         tareas.add(new Tarea("Tarea 1", 30));
         tareas.add(new Tarea("Tarea 2", 45));
@@ -110,13 +110,13 @@ public class Planificador_de_tareas {
         tareas.add(new Tarea("Tarea 4", 20));
         tareas.add(new Tarea("Tarea 5", 35));
 
-        // Distribuir tareas
+
         planificador.distribuirTareas(tareas);
 
-        // Mostrar horarios
+
         planificador.mostrarHorarios();
 
-        // Calcular carga de trabajo óptima
+
         planificador.calcularCargaTrabajoOptima();
     }
 }
