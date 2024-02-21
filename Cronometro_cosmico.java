@@ -40,7 +40,7 @@ class CronometroCosmico {
     }
 }
 
-public class Main {
+public class Cronometro_cosmico {
     public static void main(String[] args) {
         CronometroCosmico tierra = new CronometroCosmico("Tierra", 1, 1);
         CronometroCosmico nuevoPlaneta = new CronometroCosmico("Nuevo Planeta", 1.5, 2);
