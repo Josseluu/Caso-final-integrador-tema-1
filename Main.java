@@ -1,4 +1,3 @@
-// Version: 1.0
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +10,10 @@ class CronometroCosmico {
         this.nombrePlaneta = nombrePlaneta;
         this.duracionDiaTierra = duracionDiaTierra;
         this.duracionAnioTierra = duracionAnioTierra;
+    }
+
+    public String getNombrePlaneta() {
+        return nombrePlaneta;
     }
 
     public Map<String, Double> convertirTiempo(double tiempoTierra) {
@@ -42,17 +45,17 @@ public class Main {
         CronometroCosmico tierra = new CronometroCosmico("Tierra", 1, 1);
         CronometroCosmico nuevoPlaneta = new CronometroCosmico("Nuevo Planeta", 1.5, 2);
 
-        System.out.println("Conversiones de tiempo:");
+        System.out.println("Conversiones de tiempo en " + nuevoPlaneta.getNombrePlaneta() + ":");
         double tiempoTierra = 3600; // 1 hora
         Map<String, Double> tiempoConvertido = nuevoPlaneta.convertirTiempo(tiempoTierra);
         for (Map.Entry<String, Double> entry : tiempoConvertido.entrySet()) {
-            System.out.println(entry.getKey() + ": " + String.format("%.2f", entry.getValue()) + " en " + nuevoPlaneta.nombrePlaneta);
+            System.out.println(entry.getKey() + ": " + String.format("%.2f", entry.getValue()));
         }
 
-        System.out.println("\nMayores valores representables:");
+        System.out.println("\nMayores valores representables en " + nuevoPlaneta.getNombrePlaneta() + ":");
         Map<String, Double> valoresNuevoPlaneta = nuevoPlaneta.mayoresValoresRepresentables();
         for (Map.Entry<String, Double> entry : valoresNuevoPlaneta.entrySet()) {
-            System.out.println(entry.getKey() + ": " + String.format("%.2f", entry.getValue()) + " en " + nuevoPlaneta.nombrePlaneta);
+            System.out.println(entry.getKey() + ": " + String.format("%.2f", entry.getValue()));
         }
     }
 }
