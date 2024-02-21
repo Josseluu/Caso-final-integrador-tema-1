@@ -1,3 +1,4 @@
+// Version: 1.0
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,13 +30,14 @@ class CronometroCosmico {
     public Map<String, Double> mayoresValoresRepresentables() {
         Map<String, Double> mayoresValores = new HashMap<>();
         mayoresValores.put("int", (Math.pow(2, 31) - 1) * this.duracionDiaTierra); // Por ejemplo, para int32
-        mayoresValores.put("float", Double.POSITIVE_INFINITY); /
+        mayoresValores.put("float", Double.POSITIVE_INFINITY); // No hay límite, asumimos infinito
+        // Otros tipos de datos según sea necesario
 
         return mayoresValores;
     }
 }
 
-public class cromometro_cosmico {
+public class Main {
     public static void main(String[] args) {
         CronometroCosmico tierra = new CronometroCosmico("Tierra", 1, 1);
         CronometroCosmico nuevoPlaneta = new CronometroCosmico("Nuevo Planeta", 1.5, 2);
