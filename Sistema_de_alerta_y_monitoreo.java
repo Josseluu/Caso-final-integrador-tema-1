@@ -86,15 +86,15 @@ public class Sistema_de_alerta_y_monitoreo {
     public static void main(String[] args) {
         SistemaAlertaMonitoreo sistema = new SistemaAlertaMonitoreo();
 
-        // Simulación de datos de monitoreo
+
         sistema.agregarDatos(95.0, -15.0, 100.0);
         sistema.agregarDatos(110.0, -25.0, 90.0);
         sistema.agregarDatos(80.0, -10.0, 120.0);
 
-        // Monitoreo y alertas
+
         sistema.monitorear();
 
-        // Listar los primeros 5 números primos
+
         sistema.listarEventosRaros(5);
     }
 }
