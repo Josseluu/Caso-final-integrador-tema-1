@@ -29,8 +29,7 @@ class CronometroCosmico {
     public Map<String, Double> mayoresValoresRepresentables() {
         Map<String, Double> mayoresValores = new HashMap<>();
         mayoresValores.put("int", (Math.pow(2, 31) - 1) * this.duracionDiaTierra); // Por ejemplo, para int32
-        mayoresValores.put("float", Double.POSITIVE_INFINITY); // No hay límite, asumimos infinito
-        // Otros tipos de datos según sea necesario
+        mayoresValores.put("float", Double.POSITIVE_INFINITY); /
 
         return mayoresValores;
     }
